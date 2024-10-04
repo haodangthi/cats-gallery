@@ -50,20 +50,14 @@ export class CatSearchComponent implements OnInit {
       breed: [''],
       limit: [10],
     })
-  }
 
-  public ngOnInit() {
     this.breeds$ = this.store.select(CatState.breeds)
     this.cats$ = this.store.select(CatState.cats)
     this.loading$ = this.store.select(CatState.loading)
+  }
 
-    this.store.dispatch(new GetBreeds()).subscribe({
-      next: (res) => console.log('Breeds fetched:', res),
-      error: (err) => console.error('Error fetching breeds:', err),
-    })
-
-    this.breeds$.subscribe((breeds) => console.log('Breeds:', breeds))
-    this.cats$.subscribe((cats) => console.log('Cats:', cats))
+  public ngOnInit() {
+    this.store.dispatch(new GetBreeds())
   }
 
   public onSearch() {
