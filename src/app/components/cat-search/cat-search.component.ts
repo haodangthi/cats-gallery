@@ -10,7 +10,6 @@ import { Observable } from 'rxjs'
 import { Breed, Cat, CatState, GetBreeds, SearchCats } from '../../state'
 import { Store } from '@ngxs/store'
 import {
-  MatProgressSpinner,
   MatProgressSpinnerModule,
 } from '@angular/material/progress-spinner'
 import { MatSelect } from '@angular/material/select'
