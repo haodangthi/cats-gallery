@@ -22,7 +22,7 @@ export const appConfig: ApplicationConfig = {
     provideNoopAnimations(),
     importProvidersFrom(
       HttpClientModule,
-      NgxsModule.forRoot([CatState]) // Initialize the NgXS Store with the CatState
+      NgxsModule.forRoot([CatState])
     ),
   ],
 }
